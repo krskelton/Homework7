@@ -22,11 +22,17 @@ $('input').on('keyup', function() {
 		$.each(results, function(i, value){	
 			var html = $('<a href="">' + value.Text + '</a>');
 			//Open a new window when result is selected
-			$('a').click(function(){
-				window.open("http://www.bing.com/search?q=" + value.Text);
-			});
+			// $('a').click(function(){
+			// 	window.open("http://www.bing.com/search?q=" + value.Text);
+			// });
 			//Append the results to the results div
+			var linkedUrl = "http://www.bing.com/search?q=" + value.Text;
+
 			$('#results').append(html);
 		});
+	});
+
+	$('a').click(function(){
+				window.open(linkedUrl);
 	});
 });
