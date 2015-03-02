@@ -21,6 +21,7 @@ $('input').on('keyup', function() {
 		//Iterate through the results array and display the values in the results div
 		$.each(results, function(i, value){	
 			var html = $('<a href="">' + value.Text + '</a>');
+			
 			//Open a new window when result is selected
 			$('a').click(function(){
 				window.open("http://www.bing.com/search?q=" + value.Text);
